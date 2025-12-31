@@ -1,0 +1,93 @@
+.car-damage-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-primary);
+}
+
+.car-svg {
+  width: 180px;
+  height: auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+.car-svg path,
+.car-svg rect {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.car-svg path:hover,
+.car-svg rect:hover {
+  filter: brightness(1.1);
+  stroke-width: 2.5;
+}
+
+/* Legend */
+.damage-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--border-secondary);
+}
+
+.legend-dot.original {
+  background: #22C55E;
+}
+
+.legend-dot.painted {
+  background: #F59E0B;
+}
+
+.legend-dot.local-painted {
+  background: repeating-linear-gradient(
+    45deg,
+    #F59E0B,
+    #F59E0B 2px,
+    #FEF3C7 2px,
+    #FEF3C7 4px
+  );
+}
+
+.legend-dot.changed {
+  background: #EF4444;
+}
+
+.legend-dot.unknown {
+  background: #9CA3AF;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .car-svg {
+    width: 140px;
+  }
+  
+  .damage-legend {
+    gap: 0.5rem;
+  }
+  
+  .legend-item {
+    font-size: 0.65rem;
+  }
+}
+

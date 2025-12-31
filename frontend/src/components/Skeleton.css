@@ -1,0 +1,133 @@
+/* Skeleton Loading Component */
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.75rem;
+}
+
+.skeleton-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* Skeleton Card */
+.skeleton-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.skeleton-card-image {
+  height: 200px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-tertiary) 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    var(--bg-tertiary) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.skeleton-card-content {
+  padding: 1.25rem;
+}
+
+.skeleton-title {
+  height: 20px;
+  width: 85%;
+  margin-bottom: 12px;
+}
+
+.skeleton-price {
+  height: 24px;
+  width: 40%;
+  margin-bottom: 16px;
+}
+
+.skeleton-tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.skeleton-tag {
+  height: 28px;
+  width: 70px;
+  border-radius: var(--radius-sm);
+}
+
+/* Skeleton Stat */
+.skeleton-stat {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.skeleton-stat-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+}
+
+.skeleton-stat-content {
+  flex: 1;
+}
+
+.skeleton-stat-value {
+  height: 28px;
+  width: 50%;
+  margin-bottom: 8px;
+}
+
+.skeleton-stat-label {
+  height: 14px;
+  width: 70%;
+}
+
+/* Shimmer Animation */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg-tertiary) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    var(--bg-tertiary) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .skeleton-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .skeleton-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skeleton-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

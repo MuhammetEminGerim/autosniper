@@ -1,0 +1,250 @@
+﻿autosniper-backend  | 
+autosniper-backend  |     <td class="horizontal-half-padder-minus pr">
+autosniper-backend  | 
+autosniper-backend  |         <h4 class="crop-after crop-after-40 odd-ca40 ">
+autosniper-backend  |             <div class="listing-text-new word-break listing-title-lines" ng-non-bindable="">Linea 1.3 Multijet Active Plus 2012 Model Ankara</div>
+autosniper-backend  |         </h4>
+autosniper-backend  |         <div class="label-container">
+autosniper-backend  |         </div>
+autosniper-backend  | 
+autosniper-backend  |         <div class="item-overlay overlay-36116855"></div>
+autosniper-backend  |         <a href="/ilan/galeriden-satilik-fiat-linea-1-3-multijet-active-plus/linea-1-3-multijet-active-plus-2012-model-ankara/36116855" class="link-overlay" onclick="dataLayerClick('1' , '0')" target="_self"></a>
+autosniper-backend  |     </td>
+autosniper-backend  |         <td c
+autosniper-backend  | === HTML SONU ===
+autosniper-backend  | Toplam 20 benzersiz ilan URL'si bulundu
+autosniper-backend  | Listing card'lardan veri ├ğekiliyor...
+autosniper-backend  | ─░lan eklendi: Linea 1.3 Multijet Active Plus 2012 Model Ank - 495000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Galeriden Fiat Albea 1.2 EL 2004 Model Denizl - 300000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2023 EGEA 1.3 MULT─░JET2 100.YIL HATASIZ-BOYAS - 985000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: OTOMAT─░K MASRAFSIZ LOUNGE 155 B─░N KM EN DOLUS - 889000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Galeriden Fiat Egea 1.4 Fire Urban 2021 Model - 697500.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: MEHMET ARAT'tan FIAT PALIO SOLE 1.3 MULT─░JET  - 375000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Galeriden Fiat Albea 1.4 Fire Active 2006 Mod - 350000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Galeriden Fiat Tempra 1.6 SX 1993 Model Karam - 120000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2012 DE─Ş─░┼ŞENS─░Z MASRAFSIZ MAKYAJLI KASA EN DO - 479750.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Galeriden Fiat Palio 1.4 EL 2000 Model Kayser - 230000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Emsalsiz Linea Daha dolusu yok - 610000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2021+HATASIZ+BOYASIZ+DE─Ş─░┼ŞEN─░Z+43B─░NKM+EGEA - 810000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: NUROL-HATASIZ 2023 EGEA 1.3 M.JET EASY PLUS 1 - 985000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: KESER'DEN HATASIZ AYARINDA YEN─░ LOGO EGEA - 718000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 73.000 KM'DE HATASIZ~BOYASIZ~URBAN PLUS - 810000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2014 ÔÇİ165.000ÔÇÖ KM HATASIZ BOYASIZ KAYITSIZ TE - 560000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2010 PUNTO 1.4 OTOMAT─░K V─░TES 165 B─░N KM DE - 495000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: ZEYM─░R DEN D├£┼Ş├£K KM EGEA - 658000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2010 MODEL FIAT LINEA 1.3 MULTIJET MASRAFSIZ  - 380000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2018 MODEL EGEA 1.3 MULT─░JET DE─ŞI┼ŞENSIZ - 750000.0 TL - 1 resim
+autosniper-backend  | INFO:     172.19.0.1:42080 - "POST /api/filters/2/search HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:42080 - "OPTIONS /api/filters HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     ('172.19.0.1', 48340) - "WebSocket /api/ws?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNzY3MDE0NDk2fQ.RkxPKadXlmmP-VYKZ7RVfr8GNaV7pUveJR92D8AoMnM" [accepted]
+autosniper-backend  | INFO:     connection open
+autosniper-backend  | INFO:     172.19.0.1:42080 - "GET /api/filters HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:48342 - "GET /api/listings?page_size=1 HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     connection closed
+autosniper-backend  | INFO:     172.19.0.1:48342 - "GET /api/listings?page=1&page_size=20 HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     ('172.19.0.1', 55590) - "WebSocket /api/ws?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNzY3MDE0NDk2fQ.RkxPKadXlmmP-VYKZ7RVfr8GNaV7pUveJR92D8AoMnM" [accepted]
+autosniper-backend  | INFO:     connection open
+autosniper-backend  | WARNING:  WatchFiles detected changes in 'app/services/scraper/scraper.py'. Reloading...
+autosniper-backend  | INFO:     Shutting down
+autosniper-backend  | INFO:     connection closed
+autosniper-backend  | INFO:     Waiting for application shutdown.
+autosniper-backend  | INFO:     Application shutdown complete.
+autosniper-backend  | INFO:     Finished server process [10]
+autosniper-backend  | INFO:     Started server process [304]
+autosniper-backend  | INFO:     Waiting for application startup.
+autosniper-backend  | INFO:     Application startup complete.
+autosniper-backend  | INFO:     ('172.19.0.1', 55504) - "WebSocket /api/ws?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNzY3MDE0NDk2fQ.RkxPKadXlmmP-VYKZ7RVfr8GNaV7pUveJR92D8AoMnM" [accepted]
+autosniper-backend  | INFO:     connection open
+autosniper-backend  | INFO:     Shutting down
+autosniper-backend  | INFO:     connection closed
+autosniper-backend  | INFO:     Waiting for application shutdown.
+autosniper-backend  | INFO:     Application shutdown complete.
+autosniper-backend  | INFO:     Finished server process [304]
+autosniper-backend  | INFO:     Stopping reloader process [1]
+autosniper-backend  | INFO:     Will watch for changes in these directories: ['/app']
+autosniper-backend  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+autosniper-backend  | INFO:     Started reloader process [1] using WatchFiles
+autosniper-backend  | INFO:     Started server process [8]
+autosniper-backend  | INFO:     Waiting for application startup.
+autosniper-backend  | INFO:     Application startup complete.
+autosniper-backend  | INFO:     ('172.19.0.1', 38170) - "WebSocket /api/ws?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNzY3MDE0NDk2fQ.RkxPKadXlmmP-VYKZ7RVfr8GNaV7pUveJR92D8AoMnM" [accepted]
+autosniper-backend  | INFO:     connection open
+autosniper-backend  | WARNING:  WatchFiles detected changes in 'app/services/scraper/scraper.py'. Reloading...
+autosniper-backend  | INFO:     Shutting down
+autosniper-backend  | INFO:     connection closed
+autosniper-backend  | INFO:     Waiting for application shutdown.
+autosniper-backend  | INFO:     Application shutdown complete.
+autosniper-backend  | INFO:     Finished server process [8]
+autosniper-backend  | INFO:     Started server process [10]
+autosniper-backend  | INFO:     Waiting for application startup.
+autosniper-backend  | INFO:     Application startup complete.
+autosniper-backend  | INFO:     ('172.19.0.1', 54154) - "WebSocket /api/ws?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwiZXhwIjoxNzY3MDE0NDk2fQ.RkxPKadXlmmP-VYKZ7RVfr8GNaV7pUveJR92D8AoMnM" [accepted]
+autosniper-backend  | INFO:     connection open
+autosniper-backend  | INFO:     connection closed
+autosniper-backend  | INFO:     172.19.0.1:38168 - "OPTIONS /api/listings?page=1&page_size=20 HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:38168 - "GET /api/listings?page=1&page_size=20 HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:38168 - "OPTIONS /api/listings HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:38168 - "DELETE /api/listings HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:38168 - "GET /api/filters HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:38168 - "GET /api/filters HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:38168 - "GET /api/filters HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:38168 - "OPTIONS /api/filters/2/search HTTP/1.1" 200 OK
+autosniper-backend  | Olu┼şturulan URL: https://www.arabam.com/ikinci-el/fiat?sort=1&minYear=2000&maxYear=2025
+autosniper-backend  | URL'ye gidiliyor: https://www.arabam.com/ikinci-el/fiat?sort=1&minYear=2000&maxYear=2025
+autosniper-backend  | Sayfa scroll ediliyor (lazy loading i├ğin)...
+autosniper-backend  | Sayfa ba┼şl─▒─ş─▒: Fiat Fiyatlar─▒ & ─░kinci El Sat─▒l─▒k Fiat Modelleri - arabam.com
+autosniper-backend  | Mevcut URL: https://www.arabam.com/ikinci-el/otomobil/fiat
+autosniper-backend  | Sayfa i├ğeri─şi uzunlu─şu: 1402740 karakter
+autosniper-backend  | SAYFA BA┼ŞARIYLA Y├£KLEND─░: https://www.arabam.com/ikinci-el/otomobil/fiat
+autosniper-backend  | Bulunan ilan linki say─▒s─▒: 0
+autosniper-backend  | Alternatif ilan linki say─▒s─▒: 180
+autosniper-backend  | Listing card say─▒s─▒: 20
+autosniper-backend  | === ─░LK KART HTML (ilk 2000 karakter) ===
+autosniper-backend  | 
+autosniper-backend  |     <td class="pr" style="width: 200px;">
+autosniper-backend  |         <div class="fade-out-content-wrapper">
+autosniper-backend  |             <a href="/ilan/galeriden-satilik-fiat-linea-1-3-multijet-active-plus/linea-1-3-multijet-active-plus-2012-model-ankara/36116855" onclick="dataLayerClick('1' , '0')" target="_self" class="smallest-text-minus ovh">
+autosniper-backend  |                 <img class="listing-image loaded" src="https://arbstorage.mncdn.com/ilanfotograflari/2025/12/22/36116855/e93505bf-b4e7-41dc-8d22-f86f527de462_image_for_silan_36116855_240x180.jpg" data-src="https://arbstorage.mncdn.com/ilanfotograflari/2025/12/22/36116855/e93505bf-b4e7-41dc-8d22-f86f527de462_image_for_silan_36116855_240x180.jpg" alt="Linea 1.3 Multijet Active Plus 2012 Model Ankara" width="120" height="90" data-was-processed="true">
+autosniper-backend  |             </a>
+autosniper-backend  |         </div>
+autosniper-backend  |         <div class="item-overlay overlay-36116855 "></div>
+autosniper-backend  |     </td>
+autosniper-backend  |         <td class="listing-modelname pr">
+autosniper-backend  |             <h3 class="crop-after">
+autosniper-backend  |                 <div class="listing-text-new word-break val-middle color-black2018">Fiat Linea 1.3 Multijet Active Plus</div>
+autosniper-backend  |             </h3>
+autosniper-backend  |             <div class="item-overlay overlay-36116855 "></div>
+autosniper-backend  |             <a href="/ilan/galeriden-satilik-fiat-linea-1-3-multijet-active-plus/linea-1-3-multijet-active-plus-2012-model-ankara/36116855" class="link-overlay" onclick="dataLayerClick('1' , '0')" target="_self"></a>
+autosniper-backend  |         </td>
+autosniper-backend  | 
+autosniper-backend  |     <td class="horizontal-half-padder-minus pr">
+autosniper-backend  | 
+autosniper-backend  |         <h4 class="crop-after crop-after-40 odd-ca40 ">
+autosniper-backend  |             <div class="listing-text-new word-break listing-title-lines" ng-non-bindable="">Linea 1.3 Multijet Active Plus 2012 Model Ankara</div>
+autosniper-backend  |         </h4>
+autosniper-backend  |         <div class="label-container">
+autosniper-backend  |         </div>
+autosniper-backend  | 
+autosniper-backend  |         <div class="item-overlay overlay-36116855"></div>
+autosniper-backend  |         <a href="/ilan/galeriden-satilik-fiat-linea-1-3-multijet-active-plus/linea-1-3-multijet-active-plus-2012-model-ankara/36116855" class="link-overlay" onclick="dataLayerClick('1' , '0')" target="_self"></a>
+autosniper-backend  |     </td>
+autosniper-backend  |         <td c
+autosniper-backend  | === HTML SONU ===
+autosniper-backend  | Toplam 20 benzersiz ilan URL'si bulundu
+autosniper-backend  | Listing card'lardan veri ├ğekiliyor...
+autosniper-backend  | ─░lan eklendi: Linea 1.3 Multijet Active Plus 2012 Model Ank - 495000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Galeriden Fiat Albea 1.2 EL 2004 Model Denizl - 300000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2023 EGEA 1.3 MULT─░JET2 100.YIL HATASIZ-BOYAS - 985000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: OTOMAT─░K MASRAFSIZ LOUNGE 155 B─░N KM EN DOLUS - 889000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Galeriden Fiat Egea 1.4 Fire Urban 2021 Model - 697500.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: MEHMET ARAT'tan FIAT PALIO SOLE 1.3 MULT─░JET  - 375000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Galeriden Fiat Albea 1.4 Fire Active 2006 Mod - 350000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Galeriden Fiat Tempra 1.6 SX 1993 Model Karam - 120000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2012 DE─Ş─░┼ŞENS─░Z MASRAFSIZ MAKYAJLI KASA EN DO - 479750.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Galeriden Fiat Palio 1.4 EL 2000 Model Kayser - 230000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Emsalsiz Linea Daha dolusu yok - 610000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2021+HATASIZ+BOYASIZ+DE─Ş─░┼ŞEN─░Z+43B─░NKM+EGEA - 810000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: NUROL-HATASIZ 2023 EGEA 1.3 M.JET EASY PLUS 1 - 985000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: KESER'DEN HATASIZ AYARINDA YEN─░ LOGO EGEA - 718000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 73.000 KM'DE HATASIZ~BOYASIZ~URBAN PLUS - 810000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2014 ÔÇİ165.000ÔÇÖ KM HATASIZ BOYASIZ KAYITSIZ TE - 560000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2010 PUNTO 1.4 OTOMAT─░K V─░TES 165 B─░N KM DE - 495000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: ZEYM─░R DEN D├£┼Ş├£K KM EGEA - 658000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2010 MODEL FIAT LINEA 1.3 MULTIJET MASRAFSIZ  - 380000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2018 MODEL EGEA 1.3 MULT─░JET DE─ŞI┼ŞENSIZ - 750000.0 TL - 1 resim
+autosniper-backend  | INFO:     172.19.0.1:38168 - "POST /api/filters/2/search HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:38168 - "GET /api/listings?page=1&page_size=20 HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:35946 - "OPTIONS /api/listings/326 HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:35946 - "GET /api/listings/326 HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:35946 - "OPTIONS /api/listings/327 HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:35946 - "GET /api/listings/327 HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:38418 - "OPTIONS /api/listings/329 HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:38418 - "GET /api/listings/329 HTTP/1.1" 200 OK
+autosniper-backend  | WARNING:  WatchFiles detected changes in 'app/services/scraper/scraper.py'. Reloading...
+autosniper-backend  | INFO:     Shutting down
+autosniper-backend  | INFO:     Waiting for application shutdown.
+autosniper-backend  | INFO:     Application shutdown complete.
+autosniper-backend  | INFO:     Finished server process [10]
+autosniper-backend  | INFO:     Started server process [155]
+autosniper-backend  | INFO:     Waiting for application startup.
+autosniper-backend  | INFO:     Application startup complete.
+autosniper-backend  | INFO:     Shutting down
+autosniper-backend  | INFO:     Waiting for application shutdown.
+autosniper-backend  | INFO:     Application shutdown complete.
+autosniper-backend  | INFO:     Finished server process [155]
+autosniper-backend  | INFO:     Stopping reloader process [1]
+autosniper-backend  | INFO:     Will watch for changes in these directories: ['/app']
+autosniper-backend  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+autosniper-backend  | INFO:     Started reloader process [1] using WatchFiles
+autosniper-backend  | INFO:     Started server process [8]
+autosniper-backend  | INFO:     Waiting for application startup.
+autosniper-backend  | INFO:     Application startup complete.
+autosniper-backend  | WARNING:  WatchFiles detected changes in 'app/services/scraper/scraper.py'. Reloading...
+autosniper-backend  | INFO:     Shutting down
+autosniper-backend  | INFO:     Waiting for application shutdown.
+autosniper-backend  | INFO:     Application shutdown complete.
+autosniper-backend  | INFO:     Finished server process [8]
+autosniper-backend  | INFO:     Started server process [10]
+autosniper-backend  | INFO:     Waiting for application startup.
+autosniper-backend  | INFO:     Application startup complete.
+autosniper-backend  | INFO:     172.19.0.1:33142 - "DELETE /api/listings HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:33142 - "GET /api/filters HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:33142 - "GET /api/filters HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:33142 - "GET /api/filters HTTP/1.1" 200 OK
+autosniper-backend  | Olu┼şturulan URL: https://www.arabam.com/ikinci-el/fiat?sort=1&minYear=2000&maxYear=2025
+autosniper-backend  | URL'ye gidiliyor: https://www.arabam.com/ikinci-el/fiat?sort=1&minYear=2000&maxYear=2025
+autosniper-backend  | Sayfa scroll ediliyor (lazy loading i├ğin)...
+autosniper-backend  | Sayfa ba┼şl─▒─ş─▒: Fiat Fiyatlar─▒ & ─░kinci El Sat─▒l─▒k Fiat Modelleri - arabam.com
+autosniper-backend  | Mevcut URL: https://www.arabam.com/ikinci-el/otomobil/fiat
+autosniper-backend  | Sayfa i├ğeri─şi uzunlu─şu: 1404414 karakter
+autosniper-backend  | SAYFA BA┼ŞARIYLA Y├£KLEND─░: https://www.arabam.com/ikinci-el/otomobil/fiat
+autosniper-backend  | Bulunan ilan linki say─▒s─▒: 0
+autosniper-backend  | Alternatif ilan linki say─▒s─▒: 180
+autosniper-backend  | Listing card say─▒s─▒: 20
+autosniper-backend  | === KART 1: product-location YOK ===
+autosniper-backend  | === KART 2: product-location YOK ===
+autosniper-backend  | === KART 3: product-location YOK ===
+autosniper-backend  | === DEBUG SONU ===
+autosniper-backend  | Toplam 20 benzersiz ilan URL'si bulundu
+autosniper-backend  | Listing card'lardan veri ├ğekiliyor...
+autosniper-backend  | ─░lan eklendi: Linea 1.3 Multijet Active Plus 2012 Model Ank - 495000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Galeriden Fiat Albea 1.2 EL 2004 Model Denizl - 300000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2023 EGEA 1.3 MULT─░JET2 100.YIL HATASIZ-BOYAS - 985000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: OTOMAT─░K MASRAFSIZ LOUNGE 155 B─░N KM EN DOLUS - 889000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Galeriden Fiat Egea 1.4 Fire Urban 2021 Model - 697500.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: MEHMET ARAT'tan FIAT PALIO SOLE 1.3 MULT─░JET  - 375000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Galeriden Fiat Albea 1.4 Fire Active 2006 Mod - 350000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Galeriden Fiat Tempra 1.6 SX 1993 Model Karam - 120000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2012 DE─Ş─░┼ŞENS─░Z MASRAFSIZ MAKYAJLI KASA EN DO - 479750.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Galeriden Fiat Palio 1.4 EL 2000 Model Kayser - 230000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: Emsalsiz Linea Daha dolusu yok - 610000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2021+HATASIZ+BOYASIZ+DE─Ş─░┼ŞEN─░Z+43B─░NKM+EGEA - 810000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: NUROL-HATASIZ 2023 EGEA 1.3 M.JET EASY PLUS 1 - 985000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: KESER'DEN HATASIZ AYARINDA YEN─░ LOGO EGEA - 718000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 73.000 KM'DE HATASIZ~BOYASIZ~URBAN PLUS - 810000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2014 ÔÇİ165.000ÔÇÖ KM HATASIZ BOYASIZ KAYITSIZ TE - 560000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2010 PUNTO 1.4 OTOMAT─░K V─░TES 165 B─░N KM DE - 495000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: ZEYM─░R DEN D├£┼Ş├£K KM EGEA - 658000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2010 MODEL FIAT LINEA 1.3 MULTIJET MASRAFSIZ  - 380000.0 TL - 1 resim
+autosniper-backend  | ─░lan eklendi: 2018 MODEL EGEA 1.3 MULT─░JET DE─ŞI┼ŞENSIZ - 750000.0 TL - 1 resim
+autosniper-backend  | INFO:     172.19.0.1:33142 - "POST /api/filters/2/search HTTP/1.1" 200 OK
+autosniper-backend  | INFO:     172.19.0.1:33142 - "GET /api/listings?page=1&page_size=20 HTTP/1.1" 200 OK
+autosniper-backend  | WARNING:  WatchFiles detected changes in 'app/services/scraper/scraper.py'. Reloading...
+autosniper-backend  | INFO:     Shutting down
+autosniper-backend  | INFO:     Waiting for application shutdown.
+autosniper-backend  | INFO:     Application shutdown complete.
+autosniper-backend  | INFO:     Finished server process [10]
+autosniper-backend  | INFO:     Started server process [155]
+autosniper-backend  | INFO:     Waiting for application startup.
+autosniper-backend  | INFO:     Application startup complete.
+autosniper-backend  | INFO:     Shutting down
+autosniper-backend  | INFO:     Waiting for application shutdown.
+autosniper-backend  | INFO:     Application shutdown complete.
+autosniper-backend  | INFO:     Finished server process [155]
+autosniper-backend  | INFO:     Stopping reloader process [1]
+autosniper-backend  | INFO:     Will watch for changes in these directories: ['/app']
+autosniper-backend  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+autosniper-backend  | INFO:     Started reloader process [1] using WatchFiles
+autosniper-backend  | INFO:     Started server process [8]
+autosniper-backend  | INFO:     Waiting for application startup.
+autosniper-backend  | INFO:     Application startup complete.
