@@ -149,6 +149,8 @@ async def reset_password(request: ResetPasswordRequest, db: Session = Depends(ge
     }
 
 
+
+
 @router.get("/verify-reset-token/{token}")
 async def verify_reset_token(token: str, db: Session = Depends(get_db)):
     """
@@ -163,4 +165,40 @@ async def verify_reset_token(token: str, db: Session = Depends(get_db)):
         return {"valid": False, "message": "Token süresi dolmuş"}
     
     return {"valid": True, "email": user.email}
+
+
+@router.post("/create-admin-temp")
+async def create_admin_temp(db: Session = Depends(get_db)):
+    """
+    TEMPORARY: Admin kullanıcı oluştur (production için)
+    Bu endpoint sadece bir kez çalıştırılmalı!
+    """
+    # Admin zaten var mı kontrol et
+    admin = db.query(User).filter(User.email == "admin@autosniper.com").first()
+    
+    if admin:
+        return {"message": "Admin kullanıcı zaten mevcut", "email": "admin@autosniper.com"}
+    
+    # Admin oluştur
+    hashed_password = get_password_hash("admin123")
+    admin_user = User(
+        email="admin@autosniper.com",
+        password_hash=hashed_password,
+        is_admin=True,
+        is_active=True,
+        subscription_tier="pro",
+        daily_search_limit=2000,
+        max_filters=9999
+    )
+    
+    db.add(admin_user)
+    db.commit()
+    db.refresh(admin_user)
+    
+    return {
+        "message": "Admin kullanıcı başarıyla oluşturuldu!",
+        "email": "admin@autosniper.com",
+        "password": "admin123",
+        "warning": "Bu endpoint'i production'da devre dışı bırakın!"
+    }
 
