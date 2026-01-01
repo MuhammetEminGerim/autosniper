@@ -112,9 +112,13 @@ const Dashboard = () => {
     toast.loading('Son ilanlar taranıyor...', { id: 'quick-search' })
 
     try {
-      const response = await api.post('/api/test/scrape', {})
+      const response = await api.post('/api/quick-search', {})
       toast.dismiss('quick-search')
-      toast.success(`✅ ${response.data.new_listings_added} yeni ilan eklendi!`, { duration: 5000 })
+      if (response.data.success) {
+        toast.success(response.data.message || 'Tarama tamamlandı!', { duration: 5000 });
+      } else {
+        toast.error(response.data.message || 'Tarama başarısız');
+      }
       navigate('/listings')
     } catch (error: any) {
       toast.dismiss('quick-search')

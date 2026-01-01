@@ -2,7 +2,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
-from app.api import auth, filters, listings, websocket, test, favorites, admin
+from app.api import auth, filters, listings, websocket, test, favorites, admin, quick_search
 from app.api import settings as settings_api
 from app.core.database import engine, Base
 from app.services.scheduler import scheduler_service
@@ -52,6 +52,7 @@ app.include_router(filters.router, prefix="/api/filters", tags=["filters"])
 app.include_router(listings.router, prefix="/api/listings", tags=["listings"])
 app.include_router(websocket.router, prefix="/api", tags=["websocket"])
 app.include_router(test.router, prefix="/api/test", tags=["test"])
+app.include_router(quick_search.router, prefix="/api", tags=["quick-search"])
 app.include_router(favorites.router, tags=["favorites"])
 app.include_router(settings_api.router, prefix="/api/settings", tags=["settings"])
 app.include_router(admin.router)  # Admin panel endpoints
