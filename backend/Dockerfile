@@ -31,7 +31,8 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Playwright tarayıcılarını yükle
+# Playwright sistem bağımlılıklarını ve tarayıcılarını yükle
+RUN playwright install-deps chromium
 RUN playwright install chromium
 
 # Uygulama kodunu kopyala
