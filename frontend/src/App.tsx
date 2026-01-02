@@ -14,6 +14,8 @@ import Compare from './pages/Compare'
 import Settings from './pages/Settings'
 import Statistics from './pages/Statistics'
 import AdminDashboard from './pages/AdminDashboard'
+import LicenseActivation from './pages/LicenseActivation'
+import LicenseExpired from './pages/LicenseExpired'
 import ProtectedRoute from './components/ProtectedRoute'
 import Layout from './components/Layout'
 
@@ -168,6 +170,9 @@ function App() {
             </ProtectedRoute>
           }
         />
+        {/* License routes for desktop app */}
+        <Route path="/license-activation" element={<LicenseActivation />} />
+        <Route path="/license-expired" element={<LicenseExpired />} />
       </Routes>
     </BrowserRouter>
   )

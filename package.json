@@ -1,0 +1,71 @@
+{
+    "name": "autosniper-desktop",
+    "version": "1.0.0",
+    "description": "AutoSniper Desktop App - İkinci el araç fırsat yakalama sistemi",
+    "main": "electron/main.js",
+    "scripts": {
+        "electron": "electron .",
+        "electron:dev": "concurrently \"npm run frontend:dev\" \"wait-on http://localhost:3000 && electron .\"",
+        "frontend:dev": "cd frontend && npm run dev",
+        "build": "npm run build:frontend && npm run build:backend && npm run build:electron",
+        "build:frontend": "cd frontend && npm run build",
+        "build:backend": "cd backend && pyinstaller backend.spec",
+        "build:electron": "electron-builder",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder"
+    },
+    "build": {
+        "appId": "com.autosniper.desktop",
+        "productName": "AutoSniper",
+        "directories": {
+            "output": "dist",
+            "buildResources": "build"
+        },
+        "files": [
+            "electron/**/*",
+            "frontend/dist/**/*",
+            "backend/dist/**/*"
+        ],
+        "win": {
+            "target": [
+                "nsis"
+            ],
+            "icon": "build/icon.ico"
+        },
+        "mac": {
+            "target": [
+                "dmg"
+            ],
+            "icon": "build/icon.icns",
+            "category": "public.app-category.business"
+        },
+        "linux": {
+            "target": [
+                "AppImage"
+            ],
+            "icon": "build/icon.png",
+            "category": "Office"
+        },
+        "nsis": {
+            "oneClick": false,
+            "allowToChangeInstallationDirectory": true,
+            "createDesktopShortcut": true,
+            "createStartMenuShortcut": true
+        }
+    },
+    "keywords": [
+        "autosniper",
+        "arabam",
+        "scraper",
+        "desktop"
+    ],
+    "author": "AutoSniper",
+    "license": "MIT",
+    "devDependencies": {
+        "concurrently": "^8.2.2",
+        "electron": "^28.3.3",
+        "electron-builder": "^24.13.3",
+        "electron-store": "^11.0.2",
+        "wait-on": "^7.2.0"
+    }
+}
