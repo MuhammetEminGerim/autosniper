@@ -30,7 +30,8 @@
             "target": [
                 "nsis"
             ],
-            "icon": "build/icon.ico"
+            "icon": "build/icon.ico",
+            "sign": null
         },
         "mac": {
             "target": [
@@ -61,11 +62,13 @@
     ],
     "author": "AutoSniper",
     "license": "MIT",
+    "dependencies": {
+        "electron-store": "^11.0.2"
+    },
     "devDependencies": {
         "concurrently": "^8.2.2",
         "electron": "^28.3.3",
         "electron-builder": "^24.13.3",
-        "electron-store": "^11.0.2",
         "wait-on": "^7.2.0"
     }
 }

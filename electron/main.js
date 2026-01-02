@@ -6,10 +6,27 @@
 const { app, BrowserWindow, ipcMain, Tray, Menu } = require('electron');
 const path = require('path');
 const { spawn } = require('child_process');
-const Store = require('electron-store');
+const fs = require('fs');
 
-// Config store (lisans bilgilerini saklar)
-const store = new Store();
+// Simple config storage (JSON file instead of electron-store)
+const configPath = path.join(app.getPath('userData'), 'config.json');
+
+function getConfig() {
+    try {
+        if (fs.existsSync(configPath)) {
+            return JSON.parse(fs.readFileSync(configPath, 'utf8'));
+        }
+    } catch (e) {
+        console.error('Config read error:', e);
+    }
+    return {};
+}
+
+function setConfig(key, value) {
+    const config = getConfig();
+    config[key] = value;
+    fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+}
 
 let mainWindow = null;
 let backendProcess = null;
@@ -26,30 +43,35 @@ function startBackend() {
     console.log('Starting backend...');
 
     // Development modda Python çalıştır
-    if (process.env.NODE_ENV === 'development') {
-        backendProcess = spawn('python', ['-m', 'uvicorn', 'app.main:app', '--reload', '--port', BACKEND_PORT], {
-            cwd: path.join(__dirname, '..', 'backend'),
-            shell: true
+    if (process.env.NODE_ENV === 'development' || !app.isPackaged) {
+        const backendPath = path.join(__dirname, '..', 'backend');
+        console.log('Backend path:', backendPath);
+
+        backendProcess = spawn('python', ['-m', 'uvicorn', 'app.main:app', '--reload', '--port', String(BACKEND_PORT)], {
+            cwd: backendPath,
+            shell: true,
+            stdio: 'inherit'
         });
     } else {
         // Production modda packaged backend .exe çalıştır
-        const backendExe = path.join(process.resourcesPath, 'backend', 'backend.exe');
+        const backendExe = path.join(process.resourcesPath, 'backend', 'autosniper-backend.exe');
+        console.log('Backend exe:', backendExe);
+
         backendProcess = spawn(backendExe, [], {
-            shell: true
+            shell: true,
+            stdio: 'inherit'
         });
     }
 
-    backendProcess.stdout.on('data', (data) => {
-        console.log(`Backend: ${data}`);
-    });
+    if (backendProcess) {
+        backendProcess.on('error', (err) => {
+            console.error('Backend start error:', err);
+        });
 
-    backendProcess.stderr.on('data', (data) => {
-        console.error(`Backend Error: ${data}`);
-    });
-
-    backendProcess.on('close', (code) => {
-        console.log(`Backend exited with code ${code}`);
-    });
+        backendProcess.on('close', (code) => {
+            console.log(`Backend exited with code ${code}`);
+        });
+    }
 }
 
 /**
@@ -159,18 +181,21 @@ function createTray() {
 
 // Lisans key kaydet
 ipcMain.handle('save-license-key', async (event, licenseKey) => {
-    store.set('licenseKey', licenseKey);
+    setConfig('licenseKey', licenseKey);
     return { success: true };
 });
 
 // Lisans key oku
 ipcMain.handle('get-license-key', async () => {
-    return store.get('licenseKey', null);
+    const config = getConfig();
+    return config.licenseKey || null;
 });
 
 // Lisans key sil
 ipcMain.handle('delete-license-key', async () => {
-    store.delete('licenseKey');
+    const config = getConfig();
+    delete config.licenseKey;
+    fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
     return { success: true };
 });
 
