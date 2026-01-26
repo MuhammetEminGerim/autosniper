@@ -5,7 +5,8 @@ from app.core.database import get_db
 from app.api.dependencies import get_current_user, check_rate_limit
 from app.models.user import User
 from app.models.listing import Listing
-from app.services.scraper.arabam_api import ArabamAPIClient
+# from app.services.scraper.arabam_api import ArabamAPIClient # SAHTE API KAPALI
+from app.services.scraper.scraper import ArabaComScraper # GERÇEK SCRAPER AÇIK
 from datetime import datetime
 import logging
 
@@ -19,84 +20,49 @@ async def quick_search(
     db: Session = Depends(get_db)
 ):
     """
-    Hızlı tarama - Arabam.com API kullanarak en yeni ilanları çek
+    Hızlı tarama - GERÇEK SİTE (Scraper) kullanarak en yeni ilanları çek
     """
+    scraper = None
     try:
-        logger.info(f"Hızlı tarama başlatıldı - Kullanıcı: {current_user.email}")
-        
-        # API client oluştur
-        api_client = ArabamAPIClient()
-        
-        try:
-            # En yeni 20 ilanı çek
-            raw_listings = await api_client.get_listings(take=20, skip=0, sort=1)
-            
-            if not raw_listings:
-                logger.warning("API'den ilan gelmedi")
-                return {
-                    "success": False,
-                    "message": "İlan bulunamadı",
-                    "count": 0
-                }
-            
-            # İlanları parse et ve database'e kaydet
-            saved_count = 0
-            for raw_listing in raw_listings:
-                try:
-                    # Parse et
-                    parsed = api_client.parse_listing(raw_listing)
-                    
-                    if not parsed.get('id'):
-                        continue
-                    
-                    # Database'de var mı kontrol et
-                    existing = db.query(Listing).filter(
-                        Listing.source_url == parsed['url']
-                    ).first()
-                    
-                    if existing:
-                        continue
-                    
-                    # Yeni ilan oluştur
-                    new_listing = Listing(
-                        source_url=parsed['url'],
-                        title=parsed['title'],
-                        price=float(parsed['price']),
-                        year=int(parsed['year']),
-                        km=int(parsed['km']),
-                        location=parsed['location'],
-                        date_published=parsed['date'],
-                        images=[parsed['photo']] if parsed['photo'] else [],
-                        source='arabam_api',
-                        is_new=True
-                    )
-                    
-                    db.add(new_listing)
-                    saved_count += 1
-                    
-                except Exception as e:
-                    logger.error(f"İlan parse/kayıt hatası: {e}")
-                    continue
-            
-            # Commit
-            db.commit()
-            
-            logger.info(f"Hızlı tarama tamamlandı - {saved_count} yeni ilan kaydedildi")
-            
+        logger.info(f"Gerçek tarama başlatıldı (Scraper Modu) - Kullanıcı: {current_user.email}")
+
+        # Gerçek Scraper'ı başlat
+        scraper = ArabaComScraper(db)
+
+        # Tarayıcıyı aç (Scraper.py içinde headless=False yaptık, yani pencere açılacak)
+        await scraper.init_browser()
+
+        # İlanları çek
+        listings = await scraper.scrape_listings()
+
+        if not listings:
+            logger.warning("Siteden ilan çekilemedi (Bot koruması veya boş sonuç)")
             return {
-                "success": True,
-                "message": f"{saved_count} yeni ilan bulundu",
-                "count": saved_count,
-                "total_fetched": len(raw_listings)
+                "success": False,
+                "message": "İlan bulunamadı. (Tarayıcı açıldığında müdahale etmeyin)",
+                "count": 0
             }
-            
-        finally:
-            await api_client.close()
-            
+
+        # İlanları kaydet
+        saved_count = await scraper.save_new_listings(listings)
+
+        logger.info(f"Tarama tamamlandı - {saved_count} yeni ilan kaydedildi")
+
+        return {
+            "success": True,
+            "message": f"{saved_count} yeni ilan bulundu (Gerçek Piyasa Verisi)",
+            "count": saved_count,
+            "total_fetched": len(listings)
+        }
+
     except Exception as e:
-        logger.error(f"Hızlı tarama hatası: {e}")
+        logger.error(f"Gerçek tarama hatası: {e}")
         return {
             "success": False,
             "message": f"Hata: {str(e)}",
             "count": 0
         }
+    finally:
+        # İşlem bitince tarayıcıyı kapat
+        if scraper:
+            await scraper.close_browser()

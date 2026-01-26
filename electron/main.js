@@ -33,7 +33,7 @@ let backendProcess = null;
 let tray = null;
 
 // Backend port
-const BACKEND_PORT = 8000;
+const BACKEND_PORT = 8002;
 const BACKEND_URL = `http://localhost:${BACKEND_PORT}`;
 
 /**
@@ -66,11 +66,23 @@ function startBackend() {
     if (backendProcess) {
         backendProcess.on('error', (err) => {
             console.error('Backend start error:', err);
+            // Hata durumunda kullanıcıya bildir
+            const { dialog } = require('electron');
+            dialog.showErrorBox('Backend Hatası', `Backend başlatılamadı: ${err.message}`);
         });
 
         backendProcess.on('close', (code) => {
             console.log(`Backend exited with code ${code}`);
+            if (code !== 0) {
+                const { dialog } = require('electron');
+                dialog.showErrorBox('Backend Hatası', `Backend hata ile kapandı (code: ${code})`);
+            }
         });
+
+        // Backend'in başlamasını bekle
+        setTimeout(() => {
+            console.log('Backend başlatıldı, kontrol ediliyor...');
+        }, 2000);
     }
 }
 
@@ -210,13 +222,15 @@ ipcMain.handle('get-backend-url', async () => {
 
 app.whenReady().then(() => {
     // Backend başlat
+    console.log('Uygulama başlatılıyor, backend başlatılıyor...');
     startBackend();
 
-    // Backend'in hazır olmasını bekle (3 saniye)
+    // Backend'in hazır olmasını bekle (daha uzun süre)
     setTimeout(() => {
+        console.log('Backend hazırlandı, ana pencere oluşturuluyor...');
         createWindow();
         createTray();
-    }, 3000);
+    }, 5000); // 5 saniye bekle
 
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) {

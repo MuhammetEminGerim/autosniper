@@ -33,18 +33,19 @@ class ArabaComScraper:
         try:
             self.playwright = await async_playwright().start()
             self.browser = await self.playwright.chromium.launch(
-                headless=True,
+                headless=True,  # Eski moda geri döndük ama args ile güçlendireceğiz
                 args=[
-                    '--no-sandbox', 
+                    '--headless=new', # YENİ GİZLİ MOD (Bot tespiti çok daha zor)
+                    '--no-sandbox',
                     '--disable-setuid-sandbox',
                     '--disable-dev-shm-usage',
                     '--disable-gpu',
-                    '--single-process',
-                    # Cloudflare bypass için ekstra args
-                    '--disable-blink-features=AutomationControlled',
-                    '--disable-features=IsolateOrigins,site-per-process',
-                    '--disable-web-security',
-                    '--disable-features=VizDisplayCompositor'
+                    '--disable-blink-features=AutomationControlled', # Otomasyon izlerini gizle
+                    '--ignore-certificate-errors',
+                    '--no-first-run',
+                    '--no-service-autorun',
+                    '--password-store=basic',
+                    '--use-mock-keychain',
                 ],
                 timeout=self.BROWSER_TIMEOUT
             )

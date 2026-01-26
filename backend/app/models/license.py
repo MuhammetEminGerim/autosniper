@@ -32,7 +32,7 @@ class License(Base):
     
     # User relationship (optional - eğer user sistemi varsa)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
-    user = relationship("User", back_populates="license")
+    user = relationship("User", back_populates="licenses")
     
     # Metadata
     created_at = Column(DateTime, default=datetime.utcnow)

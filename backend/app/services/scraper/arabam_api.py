@@ -153,13 +153,25 @@ class ArabamAPIClient:
             if '{0}' in photo:
                 photo = photo.replace('{0}', '800x600')
             
+            # Lokasyon bilgisini düzelt (Dict gelirse string'e çevir)
+            location = raw_data.get('location', '')
+            if isinstance(location, dict):
+                city = location.get('cityName', '')
+                town = location.get('townName', '')
+                if city and town:
+                    location = f"{town}, {city}"
+                elif city:
+                    location = city
+                else:
+                    location = str(location)
+
             return {
                 'id': raw_data.get('id'),
                 'title': raw_data.get('title', ''),
                 'price': raw_data.get('price', 0),
                 'year': raw_data.get('modelYear', 0),
-                'km': raw_data.get('mileage', 0),
-                'location': raw_data.get('location', ''),
+                'mileage': raw_data.get('mileage', 0),
+                'location': location,
                 'date': raw_data.get('dateFormatted', ''),
                 'photo': photo,
                 'category': raw_data.get('category', ''),

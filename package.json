@@ -52,7 +52,16 @@
             "allowToChangeInstallationDirectory": true,
             "createDesktopShortcut": true,
             "createStartMenuShortcut": true
-        }
+        },
+        "extraResources": [
+            {
+                "from": "backend/dist/autosniper-backend",
+                "to": "backend",
+                "filter": [
+                    "**/*"
+                ]
+            }
+        ]
     },
     "keywords": [
         "autosniper",

@@ -2,8 +2,8 @@ from pydantic_settings import BaseSettings
 from typing import List
 
 class Settings(BaseSettings):
-    # Database
-    DATABASE_URL: str = "postgresql://postgres:postgres@db:5432/autosniper"
+    # Database - SQLite for desktop, PostgreSQL for server
+    DATABASE_URL: str = "sqlite:///./autosniper.db"
     
     # JWT
     SECRET_KEY: str = "your-secret-key-change-in-production"

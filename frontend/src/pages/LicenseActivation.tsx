@@ -164,9 +164,17 @@ export default function LicenseActivation() {
 
                 <div className="license-footer">
                     <p>Henüz lisansınız yok mu?</p>
-                    <a href="https://autosniper.com/pricing" target="_blank" rel="noopener noreferrer">
-                        Lisans Satın Al →
-                    </a>
+                    <div className="contact-info">
+                        <p>📞 <strong>WhatsApp/Telefon:</strong> [Telefon Numaranız]</p>
+                        <p>💳 <strong>IBAN:</strong> [IBAN Numaranız]</p>
+                        <p>📦 <strong>Paketler:</strong></p>
+                        <ul>
+                            <li>Aylık: ₺299</li>
+                            <li>Yıllık: ₺1.999</li>
+                            <li>Lifetime: ₺4.999</li>
+                        </ul>
+                        <p><em>Hardware ID'nizi yukarıdaki kopyala butonu ile kopyalayıp bize gönderin</em></p>
+                    </div>
                 </div>
 
                 {!isElectron && (
